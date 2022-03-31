@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root{
+    --bg-icon: #e4e4e4;
+    --text-h2: #32324f;
+    --bg-input: #ecf2f7;
+    --text-placeholder: #a9adb6;
+    --bg-submit: #1F2831;
+    --bg-submit-hover: #2D3840;
+    --text-h3: #607d8b;
+}
+/*------MAIN------*/
+.containerLogin{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+/*------IMAGE------*/
+.imgBox{
+    width: 50%;
+    height: 100%;
+}
+.imgBox img{
+    width: 100%;
+    height: 100%;
+}
+/*------CONTENT------*/
+.contentBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+.contentBox .formBox{
+    width: 50%;
+}
+.contentBox .formBox .ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contentBox .formBox .ul li{
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0 7px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.contentBox .formBox .ul li:hover{
+    background-color: var(--bg-icon);
+}
+.formBox .ul li img{
+    width: 40px;
+}
+.contentBox .formBox h2{
+    color: var(--text-h2);
+    font-weight: 600;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.contentBox .formBox .inputBox{
+    margin-bottom: 20px;
+}
+.contentBox .formBox .inputBox input{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 400;
+    border: none;
+    color: var(--text-h2);
+    background-color: var(--bg-input);
+    border-radius: 10px;
+}
+.contentBox .formBox .inputBox input::placeholder{
+    color: var(--text-placeholder);
+}
+.contentBox .formBox .inputBox input[type=submit]{
+    background-color: var(--bg-submit);
+    color: #ffffff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.contentBox .formBox .inputBox input[type=submit]:hover{
+    background-color: var(--bg-submit-hover);
+    
+}
+.contentBox .formBox .inputBox span{
+    font-size: 1rem;
+    margin: 5px;
+    display: inline-block;
+    color: var(--text-h2);
+    font-weight: 400;
+}
+.contentBox .formBox .remember{
+    margin-bottom: 20px;
+    color: var(--text-h2);
+    font-weight: 400;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+}
+.contentBox .formBox .remember a{
+    text-decoration: none;
+    color: var(--bg-submit);
+}
+.contentBox .formBox .remember a:hover{
+    color: var(--bg-submit-hover);
+}
+.contentBox .formBox .inputBox p{
+    color: var(--text-h2);
+}
+.contentBox .formBox .inputBox p a{
+    color: var(--bg-submit);
+}
+.contentBox .formBox .inputBox p a:hover{
+    color: var(--bg-submit-hover);
+}
+.contentBox .formBox h3{
+    color: var(--text-h3);
+    text-decoration: none;
+    margin: 40px 0 15px;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+}
+/*------@MEDIA------*/
+@media screen and (max-width: 868px){
+    .containerLogin .imgBox{
+        display: none;
+    }
+    .containerLogin .contentBox{
+        width: 100%;
+    }
+    .containerLogin .contentBox .formBox{
+        width: 100%;
+        padding: 40px;
+        background-color: #ffffff;
+        margin: 50px;
+    }
+    .containerLogin .contentBox .formBox h3{
+        margin: 30px 0 10px;
+    }
+}
+@media screen and (max-width:450px){
+    .containerLogin .contentBox .formBox .remember{
+        flex-wrap: wrap;
+    }
+    .containerLogin .contentBox .formBox .remember a{
+        margin-top: 20px;
+    }
+}
